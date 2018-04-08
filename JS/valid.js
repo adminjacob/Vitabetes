@@ -6,7 +6,7 @@ try {
 
 
 //Funciones JQuery
-$('head').append('<link rel="stylesheet" type="text/css" href="../CSS/w3.css">');
+
 $(document).ready(function () {
     var hoy = moment();
     hoy = moment(hoy).format("YYYY-MM-DD");
@@ -28,8 +28,10 @@ $(document).ready(function () {
 });
 
 $(".subida").click(function () {
-    var str = $(".texto").val();
-    validarL(str);
+    if($('.texto')[0]){
+        var str = $(".texto").val();
+        validarL(str);
+    }
 });
 
 $(".num").keyup(function () {
