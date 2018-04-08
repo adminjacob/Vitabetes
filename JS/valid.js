@@ -17,24 +17,24 @@ $(document).ready(function () {
         "ondrop": "return false",
         "onpaste": "return false"
     });
-    $(".num").attr("maxlength", "7");
-    $(".texto").attr("onkeydown", "return validarLT(event)");
-    $(".num").attr("onkeydown", "return validarNT(event)");
-    $(".fecha").attr({
+    $(".val-num").attr("maxlength", "7");
+    $(".val-texto").attr("onkeydown", "return validarLT(event)");
+    $(".val-num").attr("onkeydown", "return validarNT(event)");
+    $(".val-fecha").attr({
         "min": hoy,
         "max": next
 
     })
 });
 
-$(".subida").click(function () {
+$(".val-subida").click(function () {
     if($('.texto')[0]){
         var str = $(".texto").val();
         validarL(str);
     }
 });
 
-$(".num").keyup(function () {
+$(".val-num").keyup(function () {
     var str = $(this).val();
     if (validarN(str)) {
         $(this).val(str);
@@ -45,7 +45,7 @@ $(".num").keyup(function () {
 });
 
 function validarFecha(){
-    var date = $(".fecha").val();
+    var date = $(".val-fecha").val();
     date = moment(date);
     if(moment().isValid(date)){
         return true;
@@ -112,10 +112,3 @@ function validarL(val) {
         return (true);
     }
 }
-
-var app = angular.module("App", []);
-app.directive("w3TestDir", function(){
-    return {
-        template: "lorem ipsum"
-    };
-});
