@@ -18,7 +18,6 @@
 		<a href="bitacoracuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf0ce;</i> Bitacora</a>
 		<a href="carnetcuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf2bc;</i> Carnet</a>
 		<a href="graficogeneral.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf080;</i> Grafico</a>
-		
 		<form>
 			<button class="w3-bar-item w3-button w3-bottom" formaction="inicio.html" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
 			<button class="w3-bar-item w3-button w3-bottom" formaction="ajustespaciente.html" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
@@ -31,13 +30,119 @@
 		<button class="w3-button w3-light-blue w3-xxlarge w3-display-topleft" style="margin: 5rem;" onclick="w3_open()">&#9776;</button>
 		<div class="w3-container">
 
-			<h1 class="w3-opacity w3-center">Graficos</h1>
-			<br>
-			<br>
+			<div class="w3-half">
+				<form>
+					<table class="w3-table-all w3-hoverable" border="1">
+		    			<thead>
+		    				<tr class="w3-light-grey">
+		        				<th>Fecha</th>
+					        	<th>Horario</th>
+					        	<th>Titulo</th>
+		      				</tr>
+		    			</thead>
+		    				<tr>
+						    	<td>   
 
-			<div class="w3-center"><i style="font-size:25rem;" class="fa">&#xf080;</i></div>
+						    		
+						    	</td>
+						    	<td>   
 
+						    		
+						    	</td>
+						    	<td>   
+
+						    		
+						    	</td>
+		    				</tr>
+		    				<tr>
+		    					<td>   
+
+						    		
+						    	</td>
+						    	<td>   
+
+						    		
+						    	</td>
+						    	<td>   
+
+						    		
+						    	</td>
+		    				</tr>
+		    				<tr>
+		      					<td>   
+
+						    		
+						    	</td>
+						    	<td>   
+
+						    		
+						    	</td>
+						    	<td>   
+
+						    		
+						    	</td>
+		    				</tr>
+		  			</table>
+		  		</form>
+  			<form>
+
+  
+
+  			</form>
+			</div>
+
+			<div class="w3-half">
+				<table class="w3-table-all w3-hoverable">
+    			<thead>
+    				<tr class="w3-light-grey">
+        				<th>Fecha</th>
+			        	<th>Horario</th>
+			        	<th>Doctor</th>
+			        	<th>Descripcion</th>
+      				</tr>
+    			</thead>
+    				<tr>
+				    	<td colspan="4">
+				    		
+							<div id="Demo1" class="w3-hide w3-animate-zoom">
+  								
+								Informacion
+
+  							</div>
+						</td>
+    				</tr>
+    				<tr>
+    					<td colspan="4">
+				    		
+							<div id="Demo2" class="w3-hide w3-animate-zoom">
+  								
+								Informacion
+
+  							</div>
+						</td>
+    				</tr>
+    				<tr>
+    					<td colspan="4">
+				    		
+							<div id="Demo3" class="w3-hide w3-animate-zoom">
+  								
+								Informacion
+
+  							</div>
+						</td>
+    				</tr>
+  			</table>
+  			<form>
+  				
+
+  			</form>
+			</div>
 			
+		</div>
+		<div>
+			<button class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'" style="width: 20rem;">
+				<i style="font-size:3rem" class="fa">&#xf067;<h1 class="w3-opacity">Crear nota</h1></i>
+			</button>
 		</div>
 	</div>
      
@@ -49,6 +154,14 @@
 		function w3_close() {
     		document.getElementById("mySidebar").style.display = "none";
     		document.getElementById("myOverlay").style.display = "none";
+		}
+		function myFunction(id) {
+    		var x = document.getElementById(id);
+    		if (x.className.indexOf("w3-show") == -1) {
+        		x.className += " w3-show";
+    		} else { 
+        		x.className = x.className.replace(" w3-show", "");
+    		}
 		}
 	</script>
 	<script src="../JS/moment.js"></script>
