@@ -1,9 +1,8 @@
 try {
-    var moment = require("moment");
+    var moment = require('moment');
 } catch (error) {
     var date = 1;
 }
-
 
 //Funciones JQuery
 
@@ -23,10 +22,8 @@ $(document).ready(function () {
     $(".val-fecha").attr({
         "min": hoy,
         "max": next
-
     })
 });
-
 $(".val-subida").click(function () {
     if($('.texto')[0]){
         var str = $(".texto").val();
@@ -43,7 +40,6 @@ $(".val-num").keyup(function () {
         $(this).val(str);
     }
 });
-
 function validarFecha(){
     var date = $(".val-fecha").val();
     date = moment(date);
