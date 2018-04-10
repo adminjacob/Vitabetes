@@ -40,6 +40,7 @@
 		<div class="w3-container">
 
 			<div class="w3-bar w3-light-gray">
+
 				<button class="subida w3-bar-item w3-button tablink w3-teal" onclick="progreso(event,'Paso1')">General</button>
 				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso2')">Alimentos y Medicinas</button>
 				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso3')">Ejercicios</button>
@@ -170,6 +171,32 @@
 				<h2>Hemos Acabado</h2>
 				<form>
 					<br>
+
+				<button class="subida w3-bar-item w3-button tablink w3-teal" onclick="progreso(event,'Paso1')">Paso 1</button>
+				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso2')">Paso 2</button>
+				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso3')">Paso 3</button>
+				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'PasoX')">Paso X</button>
+			</div>
+
+			<div id="Paso1" class="w3-container w3-border city">
+				<h2>Paso1</h2>
+				<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink w3-teal" type="submit" onclick="progreso(event,'Paso2')">Siguiente</button>
+			</div>
+
+			<div id="Paso2" class="w3-container w3-border city" style="display:none">
+				<h2>Paso2</h2>
+				<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink" type="submit" onclick="progreso(event,'Paso3')">Siguiente</button>
+			</div>
+
+			<div id="Paso3" class="w3-container w3-border city" style="display:none">
+				<h2>Paso3</h2>
+				<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink" type="submit" onclick="progreso(event,'PasoX')">Siguiente</button>
+			</div>
+
+			<div id="PasoX" class="w3-container w3-border city" style="display:none">
+				<h2>PasoX</h2>
+				<form>
+
 					<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink" type="submit" formaction="bitacorapaciente.html">Finalizar</button>
 				</form>
 			</div>
