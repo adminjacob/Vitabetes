@@ -40,6 +40,138 @@
 		<div class="w3-container">
 
 			<div class="w3-bar w3-light-gray">
+
+				<button class="subida w3-bar-item w3-button tablink w3-teal" onclick="progreso(event,'Paso1')">General</button>
+				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso2')">Alimentos y Medicinas</button>
+				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso3')">Ejercicios</button>
+				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'PasoX')">Confirmar</button>
+			</div>
+
+			<div id="Paso1" class="w3-container w3-border city">
+				<h2>General</h2>
+				
+				<form>
+					<input class="val-fecha w3-input w3-border" name="fecha" type="date"><br>
+					<input class="val-num w3-input w3-border" name="Alimen" type="text" placeholder="Nivel de Glucosa"><br>
+					<input class="val-num w3-input w3-border" name="NivPres" type="text" placeholder="Presion Arterial"><br>
+					<input class="val-num w3-input w3-border" name="NivEm" type="text" placeholder="Nivel de hemoglobina"><br>
+
+				</form>
+
+				<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink w3-teal" type="submit" onclick="progreso(event,'Paso2')">Siguiente</button>
+
+			</div>
+
+			<div id="Paso2" class="w3-container w3-border city" style="display:none">
+				<h2>Alimentos y Medicinas</h2>
+
+				<form class="w3-row-padding">
+
+					<input class="val-text w3-input w3-border" name="Alimen" type="text" placeholder="Alimentos consumidos"><br>
+					<input class="val-text w3-input w3-border" name="Medicinas" type="text" placeholder="Medicinas consumidas"><br>
+
+
+					<p>Sintomas Percibidos despues de la comida:</p>
+					<div class="w3-panel">
+					<div class="w3-half">
+						<input class="w3-check" type="checkbox" >
+						<label>Mareos</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Vomito</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Cansancio</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Dolor de cabeza</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Somnolencia</label><br>
+					</div>
+						
+					<div class="w3-half">
+						<input class="w3-check" type="checkbox" >
+						<label>Escalofrios</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Temperatura</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Urticaria</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Diarrea</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Inflamación en la zona abdominal</label><br>
+
+					</div>
+					</div>
+					<br>
+					<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink" type="submit" onclick="progreso(event,'Paso3')">Siguiente</button>
+
+				</form>
+				
+			</div>
+
+			<div id="Paso3" class="w3-container w3-border city" style="display:none">
+				<h2>Ejercicios</h2>
+
+				<form>
+					<input class="val-text w3-input w3-border" name="Ejercicio" type="text" placeholder="Ejercicios realizados"><br>
+					
+					<p>Sintomas Percividos:</p>
+					<div class="w3-panel">
+					<div class="w3-half">
+						<input class="w3-check" type="checkbox" >
+						<label>Mareos</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Vomito</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Cansancio</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Dolor de cabeza</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Somnolencia</label>
+					</div>
+						
+					<div class="w3-half">
+						<input class="w3-check" type="checkbox" >
+						<label>Escalofrios</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Temperatura</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Hinchazón en los dedos</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Dolor Muscular</label><br>
+
+						<input class="w3-check" type="checkbox" >
+						<label>Calambres</label>
+
+					</div>
+					</div>
+					
+				</form>
+
+				<br>
+				<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink" type="submit" onclick="progreso(event,'PasoX')">Siguiente</button>
+				<br>
+
+			</div>
+
+			<div id="PasoX" class="w3-container w3-border city" style="display:none">
+				<h2>Hemos Acabado</h2>
+				<form>
+					<br>
+
 				<button class="subida w3-bar-item w3-button tablink w3-teal" onclick="progreso(event,'Paso1')">Paso 1</button>
 				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso2')">Paso 2</button>
 				<button class="subida w3-bar-item w3-button tablink" onclick="progreso(event,'Paso3')">Paso 3</button>
@@ -64,6 +196,7 @@
 			<div id="PasoX" class="w3-container w3-border city" style="display:none">
 				<h2>PasoX</h2>
 				<form>
+
 					<button class="w3-button w3-bar-item w3-xlarge w3-square w3-teal tablink" type="submit" formaction="bitacorapaciente.html">Finalizar</button>
 				</form>
 			</div>
