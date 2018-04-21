@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<title>Modificar Bitacora</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body class="w3-pale-blue">
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+
+
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+
+
+    <a href="principalpaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-home"></i> Pagina principal</a>
+    <a href="bitacorapaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf0ce;</i> Bitacora</a>
+    <a href="carnetpaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf2bc;</i> Carnet</a>
+    <a href="graficospaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf080;</i> Grafico</a>
+
+
+    <form>
+
+      <button class="w3-bar-item w3-button w3-bottom" formaction="inicio.html" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
+      <button class="w3-bar-item w3-button w3-bottom" formaction="ajustespaciente.html" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
+
+    </form>
+
+
+</div>
+
+<div id="main">
+
+
+  <div class="w3-container">
+
+
+    <div class="w3-panel w3-light-blue w3-card-4">
+
+      <button id="openNav" class="w3-button w3-light-blue w3-xxlarge w3-dislpay-left" style="font-size: 3rem;" onclick="w3_open()">&#9776;</button>
+      <p class="w3-right w3-opacity" style="font-size: 2.5rem; width: 60%; margin: .5rem;">Vitabes-Paciente</p>
+
+    </div>
+
+        <!-- Contenido de la pagina-->
+        <div class="w3-container">
+
+      <label><b class="w3-opacity">Ingresa la Fecha</b></label>
+            <input class="val-fecha w3-input w3-border" type="date" placeholder="Fecha" name="Fecha" required>
+
+
+            <form action="/action_page.php">
+              <div class="w3-bar">
+                <button class="w3-bar-item w3-button" onclick="document.getElementById('id02').style.display='block'" style="width: 30%;">
+                  <h1 class="w3-opacity">Consultar registro</h1>
+                </button>
+                <form>
+                <button class="w3-bar-item w3-button" formaction="bitacorapaciente.html">
+                  <h1 class="w3-opacity">Regresar</h1>
+                </button>
+              </form>
+              </div>
+        
+
+          <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:80rem;">
+
+                <div class="w3-half">
+                  <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright w3-center" title="Close Modal">&times;</span>
+                  <h3 class="w3-opacity">Consultar</h3>
+                </div>
+
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section">
+                    
+                    <table class="w3-table-all w3-hoverable">
+                      
+                      <tr>
+
+                          <th><b>Nivel de glucosa</b></th>
+                          <th><b>Presión Arterial</b></th>
+                          <th><b>Nivel de Hemoglobina</b></th>
+                          <th><b>Alimentos</b></th>
+                          <th><b>Medicamentos</b></th>
+                          <th><b>+</b></th>
+                          
+                        </tr>
+
+                        <tr class="w3-center">
+                          
+                          <td>Información</td>
+                          <td>Información</td>
+                          <td>Información</td>
+                          <td>Información</td>
+                          <td>Información</td>
+                          <td>Información</td>
+
+                        </tr>
+
+                    </table>
+
+                    <br><br><br>
+
+                    <table>
+                      <tr>
+                          <th><b>Nivel de glucosa</b></th>
+                          
+                          <th><b>Presión Arterial</b></th>
+                          
+                          <th><b>Nivel de Hemoglobina</b></th>
+                          
+                          <th><b>Alimentos</b></th>
+                          
+                          <th><b>Medicamentos</b></th>
+                          
+                          <th><b>+</b></th>
+                          
+                        </tr>
+                        <tr>
+                          <td><input class="val-num w3-input w3-border" type="text" placeholder="" name="NivelGlucosa"></td>
+                          <td><input class="val-num w3-input w3-border" type="text" placeholder="Presion Arterial" name="PresionArterial"></td>
+                          <td><input class="val-num w3-input w3-border" type="text" placeholder="Nivel de Hemoglobina" name="NivelHemoglobina"></td>
+                          <td><input class="val-texto w3-input w3-border" type="text" placeholder="Alimentos" name="Alimentos"></td>
+                          <td><input class="val-texto w3-input w3-border" type="text" placeholder="Medicamentos" name="Medicamentos"></td>
+                          <td><input class="val-texto w3-input w3-border" type="text" placeholder="+" name="+" required=""></td>
+                        </tr>
+                      </table>
+                      
+                      <div class="w3-bar">
+	                      <button class="val-subida w3-button w3-block w3-teal w3-section w3-padding w3-bar-item" type="submit" style="width: 50%">Modificar</button>
+	                      <button onclick="document.getElementById('id02').style.display='none'" type="button" class="w3-button w3-block w3-red w3-section w3-padding w3-bar-item" style="width: 50%">Cancelar</button>
+	                  </div>
+                  </div>
+                </form>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                  
+                </div>
+
+            </div>
+          </div>
+
+        </form>
+
+        
+      
+    </div>
+
+  </div>
+
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+<script src="../JS/moment.js"></script>
+<script src="../JS/jquery.js"></script>
+<script src="../JS/valid.js"></script>
+
+</body>
+</html>
