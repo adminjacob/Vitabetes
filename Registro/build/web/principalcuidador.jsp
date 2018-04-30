@@ -1,0 +1,71 @@
+<%-- 
+    Document   : principalcuidador
+    Created on : 30/04/2018, 06:01:57 PM
+    Author     : Alumno
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Vitabes</title>
+</head>
+<body class="w3-pale-blue" style="margin: 1rem; padding: 1rem;">
+
+	<div class="w3-panel w3-light-blue w3-card-4">
+		<p class="w3-center w3-opacity" style="font-size: 2.5rem;">Vitabes-Cuidador</p>
+	</div>
+	<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+		<a href="principalcuidador.jsp" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-home"></i> Pagina principal</a>
+		<a href="bitacoracuidador.jsp" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf0ce;</i> Bitacora</a>
+		<a href="carnetcuidador.jsp" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf2bc;</i> Carnet</a>
+		<a href="graficogeneral.jsp" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf080;</i> Grafico</a>
+		
+		<form>
+			<button class="w3-bar-item w3-button w3-bottom" formaction="inicio.jsp" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
+			<button class="w3-bar-item w3-button w3-bottom" formaction="" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
+		</form>
+	</div>
+
+	<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+	<div>
+		<button class="w3-button w3-light-blue w3-xxlarge w3-display-topleft" style="margin: 5rem;" onclick="w3_open()">&#9776;</button>
+		<div class="w3-container">
+
+			<h1 class="w3-center w3-opacity">Bienvenido</h1>
+
+			<div>
+				<div class="w3-panel w3-light-gray w3-hover-shadow w3-padding-64 w3-twothird"  style="width:100%;">
+	    			<p align="center">Imagen</p>
+	  			</div>
+
+	  			<div class="w3-third">
+	  				<a href="registropacientec.jsp" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-male"></i> Registrar pacientes</a>
+					<a href="vispacientec.jsp" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-search"></i> Pacientes</a>
+	  			
+	  			</div>
+  			</div>
+			
+		</div>
+	</div>
+     
+	<script>
+		function w3_open() {
+    		document.getElementById("mySidebar").style.display = "block";
+    		document.getElementById("myOverlay").style.display = "block";
+		}
+		function w3_close() {
+    		document.getElementById("mySidebar").style.display = "none";
+    		document.getElementById("myOverlay").style.display = "none";
+		}
+	</script>
+	<script src="JS/moment.js"></script>
+	<script src="JS/jquery.js"></script>
+	<script src="JS/valid.js"></script>
+</body>
+</html>
